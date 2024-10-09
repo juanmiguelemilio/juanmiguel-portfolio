@@ -1,0 +1,179 @@
+/* Web layout */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  /* Ensuring the body takes full height */
+  min-height: 100vh;
+}
+
+
+.navbar {
+  list-style-type: none;
+  margin: 15px;
+  overflow: hidden;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+a {
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* End of Web layout */
+
+/* Header */
+
+.header-container {
+  text-align: center;
+  border: 1px solid #ccc;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the header */
+}
+
+.header-title {
+  text-align: center;
+  padding: 40px;
+}
+
+.header-content {
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+}
+
+/* End of Header */
+
+/* Container */
+
+.jme-content {
+  max-width: 1200px;
+  margin: 0 auto; /* Horizontally centers the content */
+  padding: 0;  /* Adds padding for spacing */
+}
+
+.flex-container {
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the container */
+  border: 1px solid #ccc;
+}
+
+.pwe-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.projects-container, .work-container, .education-container {
+  width: 30vw;
+  border: 1px solid #ccc;
+}
+
+.projects, .work, .education {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+/* End of Container */
+
+/* Content */
+
+.projects, .work, .education {
+  max-width: 25vw;
+}
+
+/* End of Content */
+
+/* Reviews */
+
+.reviews-container {
+  padding-top: 1rem;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-item {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 30%;
+}
+
+/* End of Reviews */
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+/* End of Footer */
+
+/* Responsive layout */
+
+/* For medium screens (tablets, small laptops) */
+@media (max-width: 800px) {
+  .pwe-container {
+    flex-direction: column;
+  }
+
+  .projects-container, .work-container, .education-container {
+    width: 100%; /* Full width for each section on small screens */
+    margin-bottom: 20px;
+  }
+
+  .projects, .work, .education {
+    max-width: 100%;
+  }
+}
+
+/* For smaller devices (phones) */
+@media (max-width: 500px) {
+  .header-title {
+    padding: 20px;
+  }
+
+  .header-content {
+    padding: 10px;
+  }
+
+  .projects, .work, .education {
+    padding: 1rem;
+  }
+
+  a {
+    padding: 10px 12px;
+  }
+
+  .review-item {
+    flex: 1 1 100%; /* Review items take full width on smaller screens */
+  }
+}
+
+/* End of Responsive layout */
